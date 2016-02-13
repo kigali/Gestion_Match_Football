@@ -70,6 +70,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\But.cs" />
+    <Compile Include="Model\Joueur.cs" />
+    <Compile Include="Model\Match.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

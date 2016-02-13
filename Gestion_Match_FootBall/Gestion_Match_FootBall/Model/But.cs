@@ -10,5 +10,6 @@ namespace Gestion_Match_FootBall.Model
     {
         public int ID_BUT { get; set; }
         public int ID_JOUEUR { get; set; }
+        public int ID_MATCH { get; set; }
     }
 }

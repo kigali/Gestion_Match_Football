@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Gestion_Match_FootBall.Model
 {
-    class Equipe
+    public class Equipe
     {
         public string NomEquipe { get; set; }
         public int Buts_Marques { get; set; }

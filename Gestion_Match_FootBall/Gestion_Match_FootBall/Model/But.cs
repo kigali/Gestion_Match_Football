@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Windows;
-
 namespace Gestion_Match_FootBall.Model
 {
     public class But

@@ -6,36 +6,16 @@
              xmlns:local="clr-namespace:Gestion_Match_FootBall.View"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="136"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-            <RowDefinition Height="100"/>
-        </Grid.RowDefinitions>
-        <StackPanel>
-            <ItemsControl ItemsSource="{Binding tous_les_Equipe}">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical">
-                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="GAGA" />
-                            <TextBox Grid.Row="0" Grid.Column="1" Width="100" Text="{Binding TeamName}">
-                                <TextBox.Background>
-                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                        <GradientStop Color="Black" Offset="0"/>
-                                        <GradientStop Color="White" Offset="1"/>
-                                    </LinearGradientBrush>
-                                </TextBox.Background>
-                            </TextBox>
-                            <TextBox Grid.Row="1" Grid.Column="1" Width="100" Text="{Binding Scored_Goals}"/>
-                            <TextBox Grid.Row="2" Grid.Column="1" Width="100" Text="{Binding Goals_Conceded}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-        </StackPanel>
-    </Grid>
+
+    <StackPanel>
+        <Label x:Name="createTeam" Content="Create Team : " HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Label x:Name="teamName" Content="Team Name:" Height="29" Margin="0,0,222,0"/>
+        <TextBox Text="{Binding TeamName, Mode=TwoWay}" Height="24" Margin="37,0,181,0"/>
+        <Label x:Name="scoredGoals" Content="Scored Goals:" Height="29" Margin="0,0,222,0"/>
+        <TextBox Text="{Binding Scored_Goals, Mode=TwoWay}" Height="24" Margin="37,0,181,0"/>
+        <Label x:Name="GoalsConceded" Content="Goals conceded:" Height="29" Margin="0,0,222,0" RenderTransformOrigin="0.5,0.5"/>
+        <TextBox Text="{Binding TeamName, Mode=TwoWay}" Height="24" Margin="37,0,181,0"/>
+        <Button  Height="26" Margin="37,0,107,0" Content="Creater" />
+    </StackPanel>
+
 </UserControl>

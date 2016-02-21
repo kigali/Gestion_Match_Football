@@ -38,13 +38,15 @@ namespace Gestion_Match_FootBall.ViewModel
             get { return _equipe.NomEquipe; }
             set { _equipe.NomEquipe = value; }
         }
+
+        
         
         // The scored goals of a team to create (0 by default, because the Federation creates team before the start of a season)
 
         public string Scored_Goals
         {
             get { return _equipe.Buts_Marques.ToString(); }
-            set { _equipe.Buts_Marques = Convert.ToInt32(value); }
+            set { _equipe.Buts_Marques = Convert.ToInt16(value); }
         }
         
         // The goals conceded of a team to create (0 by default, because the Federation creates team before the start of a season)

@@ -20,7 +20,7 @@
             </Grid>
             <Grid Height="50">
                 <Label x:Name="GoalsConceded" Content="Goals conceded:" Height="29" Margin="0,10,198,11" RenderTransformOrigin="0.5,0.5"/>
-                <TextBox Text="{Binding TeamName, Mode=TwoWay}" Margin="102,10,134,20" RenderTransformOrigin="0.5,0.5"/>
+                <TextBox Text="{Binding Goals_Conceded, Mode=TwoWay}" Margin="102,10,134,20" RenderTransformOrigin="0.5,0.5"/>
             </Grid>
         </StackPanel>
         <Button  Height="26" Margin="46,222,98,52" Content="Creater" Command="{Binding DataFromUI}" />

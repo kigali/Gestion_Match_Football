@@ -64,6 +64,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Data_Acces\EquipesRepository.cs" />
+    <Compile Include="Data_Acces\Equipe_MySQL_dataBase.cs" />
     <Compile Include="Model\Equipe.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\EquipeViewModel.cs" />

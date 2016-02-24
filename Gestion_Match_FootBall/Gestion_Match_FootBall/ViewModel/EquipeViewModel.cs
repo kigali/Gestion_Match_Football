@@ -10,6 +10,7 @@ namespace Gestion_Match_FootBall.ViewModel
     public class EquipeViewModel : ViewModel_Base
     {
         readonly EquipesRepository _equipesRepository;
+        private Equipe_MySQL_dataBase _equipe_MySQL_dataBase;
         public ObservableCollection<Equipe> Tous_les_equipes
         {
             get;
@@ -74,7 +75,13 @@ namespace Gestion_Match_FootBall.ViewModel
         }
         public void DataFromUIcommandExecute()
         {
-            MessageBox.Show(_equipe.NomEquipe);
+            //MessageBox.Show(_equipe.Buts_Marques.ToString());
+
+            // Insert team's data in MySQL dataBase
+
+            _equipe_MySQL_dataBase = new Equipe_MySQL_dataBase();
+
+            _equipe_MySQL_dataBase.Create_Equipe(_equipe);
         }
         public bool DataFromUICanExecute
         {

@@ -39,8 +39,6 @@ namespace Gestion_Match_FootBall.ViewModel
             set { _equipe.NomEquipe = value; }
         }
 
-        
-        
         // The scored goals of a team to create (0 by default, because the Federation creates team before the start of a season)
 
         public string Scored_Goals

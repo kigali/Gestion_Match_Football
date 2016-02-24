@@ -2,6 +2,8 @@
 using System.Collections.ObjectModel;
 using Gestion_Match_FootBall.Data_Acces;
 using Gestion_Match_FootBall.Model;
+using System.Windows.Input;
+using System.Windows;
 
 namespace Gestion_Match_FootBall.ViewModel
 {
@@ -14,7 +16,11 @@ namespace Gestion_Match_FootBall.ViewModel
             private set;
         }
         private Equipe _equipe;
-        
+
+        // create a command that i will bind to my User Interface
+
+        RelayCommand _dataFromUI;
+
         public EquipeViewModel()
         {
             _equipe = new Equipe();
@@ -31,7 +37,7 @@ namespace Gestion_Match_FootBall.ViewModel
         }
         // Let's Create properties that will bind with my UI (of creating a team)
 
-            // The name of a team to create
+        // The name of a team to create
 
         public string TeamName
         {
@@ -46,13 +52,38 @@ namespace Gestion_Match_FootBall.ViewModel
             get { return _equipe.Buts_Marques.ToString(); }
             set { _equipe.Buts_Marques = Convert.ToInt16(value); }
         }
-        
+
         // The goals conceded of a team to create (0 by default, because the Federation creates team before the start of a season)
 
         public String Goals_Conceded
         {
             get { return _equipe.Buts_Encaisses.ToString(); }
             set { _equipe.Buts_Encaisses = Convert.ToInt32(value); }
+        }
+
+        public ICommand DataFromUI
+        {
+            get
+            {
+                if (_dataFromUI == null)
+                {
+                    _dataFromUI = new RelayCommand (Param => this.DataFromUIcommandExecute(), Param => this.DataFromUICanExecute);
+                }
+                return _dataFromUI;
+            }
+        }
+        public void DataFromUIcommandExecute()
+        {
+            MessageBox.Show(_equipe.NomEquipe);
+        }
+        public bool DataFromUICanExecute
+        {
+            get
+            {
+                // predicate for weather to execute command or not
+
+                return true;
+            } 
         }
     }
 }

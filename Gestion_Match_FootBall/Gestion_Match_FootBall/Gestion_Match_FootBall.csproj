@@ -63,15 +63,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Data_Acces\EquipesRepository.cs" />
     <Compile Include="Data_Acces\Equipe_MySQL_dataBase.cs" />
     <Compile Include="Model\Equipe.cs" />
+    <Compile Include="ViewModel\Tous_les_Equipes_ViewModel.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\EquipeViewModel.cs" />
     <Compile Include="ViewModel\MainWindow_ViewMode.cs" />
     <Compile Include="ViewModel\ViewModel_Base.cs" />
     <Compile Include="View\EquipeView.xaml.cs">
       <DependentUpon>EquipeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Tous_Les_Equipes_View.xaml.cs">
+      <DependentUpon>Tous_Les_Equipes_View.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +90,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\EquipeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tous_Les_Equipes_View.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

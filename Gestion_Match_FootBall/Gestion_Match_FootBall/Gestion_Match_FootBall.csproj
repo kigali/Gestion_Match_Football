@@ -65,7 +65,7 @@
     </ApplicationDefinition>
     <Compile Include="Data_Acces\Equipe_MySQL_dataBase.cs" />
     <Compile Include="Model\Equipe.cs" />
-    <Compile Include="ViewModel\Tous_les_Equipes_ViewModel.cs" />
+    <Compile Include="ViewModel\Afficher_tous_les_Equipes.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\EquipeViewModel.cs" />
     <Compile Include="ViewModel\MainWindow_ViewMode.cs" />

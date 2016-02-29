@@ -26,7 +26,6 @@ namespace Gestion_Match_FootBall.Data_Acces
 
         public void Equipes_DataBase()
         {
-            equipe_from_dataBase = new Equipe();
             try
             {
                 // Ouverture de la connexion SQL
@@ -41,13 +40,14 @@ namespace Gestion_Match_FootBall.Data_Acces
                 cmd.CommandText = "SELECT * FROM Equipe";
 
                 // Exécution de la commande SQL
-
+                    
                 MySqlDataReader reader = cmd.ExecuteReader();
 
                 // Data From MySQL dataBase
 
                 while (reader.Read())
                 {
+                    equipe_from_dataBase = new Equipe();
                     equipe_from_dataBase.NomEquipe = reader.GetString(1);
                     equipe_from_dataBase.Buts_Marques = reader.GetInt16(2);
                     equipe_from_dataBase.Buts_Encaisses = reader.GetInt16(3);

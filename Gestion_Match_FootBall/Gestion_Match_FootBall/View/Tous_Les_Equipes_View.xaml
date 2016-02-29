@@ -10,7 +10,10 @@
         <ItemsControl ItemsSource="{Binding Tous_les_equipes}">
             <ItemsControl.ItemTemplate>
                 <DataTemplate>
-                    <TextBox Width="100" Text="{Binding NomEquipe}"/>
+                    <StackPanel>
+                        <TextBox Width="100" Text="{Binding NomEquipe}"/>
+                        <TextBox Width="100" Text="{Binding Buts_Marques}"/>
+                    </StackPanel>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
         </ItemsControl>

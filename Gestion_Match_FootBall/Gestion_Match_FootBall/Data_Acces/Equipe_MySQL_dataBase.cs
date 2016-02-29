@@ -25,7 +25,8 @@ namespace Gestion_Match_FootBall.Data_Acces
         }
 
         public void Equipes_DataBase()
-        {   
+        {
+            equipe_from_dataBase = new Equipe();
             try
             {
                 // Ouverture de la connexion SQL
@@ -47,9 +48,14 @@ namespace Gestion_Match_FootBall.Data_Acces
 
                 while (reader.Read())
                 {
-                    equipe_from_dataBase = (Equipe)reader.GetValue(0);
+                    equipe_from_dataBase.NomEquipe = reader.GetString(1);
+                    equipe_from_dataBase.Buts_Marques = reader.GetInt16(2);
+                    equipe_from_dataBase.Buts_Encaisses = reader.GetInt16(3);
+                    //MessageBox.Show(equipe_from_dataBase.NomEquipe);
+                    //MessageBox.Show(equipe_from_dataBase.Buts_Marques.ToString());
+                    //MessageBox.Show(equipe_from_dataBase.Buts_Encaisses.ToString());
+                    _equipes.Add(equipe_from_dataBase);
                 }
-                _equipes.Add(equipe_from_dataBase);
                 
                 // Fermeture de la connexion
 

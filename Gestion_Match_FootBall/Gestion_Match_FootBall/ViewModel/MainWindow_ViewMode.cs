@@ -14,9 +14,9 @@ namespace Gestion_Match_FootBall.ViewModel
             // create an instance of my view model and add it to my collection 
 
             Afficher_tous_les_Equipes equipes = new Afficher_tous_les_Equipes(equipes_from_dataBase);
-            EquipeViewModel equipe_viewModel = new EquipeViewModel();
-               
+            EquipeViewModel equipe_viewModel = new EquipeViewModel();             
             this.ViewModels.Add(equipe_viewModel);
+            this.ViewModels.Add(equipes);
         } 
 
         public ObservableCollection<ViewModel_Base> ViewModels

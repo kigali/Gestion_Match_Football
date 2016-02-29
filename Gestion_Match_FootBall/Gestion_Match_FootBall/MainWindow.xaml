@@ -9,9 +9,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Window.Resources>
-        <DataTemplate DataType="{x:Type vm:EquipeViewModel}">
-            <vw:EquipeView/>
+        <DataTemplate DataType="{x:Type vm:Afficher_tous_les_Equipes}">
+            <vw:Tous_Les_Equipes_View/>
         </DataTemplate>
+        <!--<DataTemplate DataType="{x:Type vm:EquipeViewModel}">
+            <vw:EquipeView/>
+        </DataTemplate>-->
     </Window.Resources>
     <Grid Margin="4">
         <Border Background="GhostWhite" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">

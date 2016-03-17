@@ -51,9 +51,6 @@ namespace Gestion_Match_FootBall.Data_Acces
                     equipe_from_dataBase.NomEquipe = reader.GetString(1);
                     equipe_from_dataBase.Buts_Marques = reader.GetInt16(2);
                     equipe_from_dataBase.Buts_Encaisses = reader.GetInt16(3);
-                    //MessageBox.Show(equipe_from_dataBase.NomEquipe);
-                    //MessageBox.Show(equipe_from_dataBase.Buts_Marques.ToString());
-                    //MessageBox.Show(equipe_from_dataBase.Buts_Encaisses.ToString());
                     _equipes.Add(equipe_from_dataBase);
                 }
                 
@@ -89,7 +86,6 @@ namespace Gestion_Match_FootBall.Data_Acces
                 cmd.CommandText = "INSERT INTO Equipe (ID_EQUIPE, NOM, BUTS_MARQUES, BUTS_ENCAISSES) VALUES (null, @nom_equipe, @buts_marques, @buts_encaisses)";
 
                 // utilisation de l'objet Equipe passé en paramètre
-                //MessageBox.Show(equipe.NomEquipe);
                 cmd.Parameters.AddWithValue("@nom_equipe", equipe.NomEquipe);
                 cmd.Parameters.AddWithValue("@buts_marques", equipe.Buts_Marques);
                 cmd.Parameters.AddWithValue("@buts_encaisses", equipe.Buts_Encaisses);

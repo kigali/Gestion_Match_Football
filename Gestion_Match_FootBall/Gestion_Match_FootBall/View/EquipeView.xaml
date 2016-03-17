@@ -1,4 +1,5 @@
 ﻿<UserControl x:Class="Gestion_Match_FootBall.View.EquipeView"
+             x:Name="equipeViewModel"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -23,6 +24,8 @@
                 <TextBox Text="{Binding Goals_Conceded, Mode=TwoWay}" Margin="102,10,134,20" RenderTransformOrigin="0.5,0.5"/>
             </Grid>
         </StackPanel>
-        <Button  Height="26" Margin="46,222,98,52" Content="Creater" Command="{Binding DataFromUI}" />
+        <Button  Height="26" Margin="46,191,98,83" Content="Create" Command="{Binding DataFromUI}" />
+        <Button Height="26" Margin="46,222,98,52" Content="Tous Les Equipes" Command="{Binding Afficher_TousLesEquipes}"
+                CommandParameter="{Binding CurrentEquipeviewMode}"/>
     </Grid>
 </UserControl>

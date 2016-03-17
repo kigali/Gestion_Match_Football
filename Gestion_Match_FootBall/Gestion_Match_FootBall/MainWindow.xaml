@@ -12,13 +12,14 @@
         <DataTemplate DataType="{x:Type vm:Afficher_tous_les_Equipes}">
             <vw:Tous_Les_Equipes_View/>
         </DataTemplate>
-        <!--<DataTemplate DataType="{x:Type vm:EquipeViewModel}">
+        <DataTemplate DataType="{x:Type vm:EquipeViewModel}">
             <vw:EquipeView/>
-        </DataTemplate>-->
+        </DataTemplate>
     </Window.Resources>
     <Grid Margin="4">
         <Border Background="GhostWhite" BorderBrush="LightGray" BorderThickness="1" CornerRadius="5">
             <ItemsControl ItemsSource= "{Binding ViewModels}" Margin="4"/>
+            <!--<ContentControl Content="{Binding Test_CurrentView}"/>-->
         </Border>
     </Grid>
 </Window>
